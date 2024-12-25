@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        .snow {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: -8px;
+            animation: snowfall 10s linear infinite;
+
+        }
+
+        @keyframes snowfall {
+            from {}
+
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="snow"></div>
+
+    <div style="display: flex; justify-content: center;">
+        <h1 style="color: white;" >Merry Christmas 🎄</h1>
+    </div>
+      
+        <div style="color: green; text-align: center; line-height: 0.5; font-size: 70px; margin-top: 60px;">
+            <div style="margin-bottom: 26px;">⭐️</div>
+            <div>*</div>
+            <div>**</div>
+            <div>***</div>
+            <div>****</div>
+            <div>*****</div>
+            <div>******</div>
+            <div>*******</div>
+            <div>********</div>
+            <div>*********</div>
+            <div>**********</div>
+            <div style="color: brown; line-height: 0.3;">
+                <div>*****</div>
+                <div>*****</div>
+                <div>*****</div>
+                <div>*****</div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+</body>
+
+
+<script>
+    const body = document.querySelector('body');
+
+    function makeSnow() {
+        const snow = document.createElement('div');
+        const delay = Math.random() * 10;
+        snow.classList.add('snow');
+        snow.style.left = Math.random() * window.innerWidth + 'px';
+        snow.style.animationDelay = delay + 's';
+        body.appendChild(snow);
+    }
+
+    makeSnow();
+
+    for (let i = 0; i < 50; i++) {
+        makeSnow();
+    }
+
+
+</script>
+</html>
+
+
